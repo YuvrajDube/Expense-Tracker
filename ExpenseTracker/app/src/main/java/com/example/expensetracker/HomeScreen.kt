@@ -135,7 +135,7 @@ fun HomeScreen(navController: NavController) {
 fun TransactionList(modifier: Modifier, list: List<ExpenseEntity>, viewModel: HomeViewModel) {
     val viewModel: HomeViewModel =
         HomeViewModelFactory(LocalContext.current).create(HomeViewModel::class.java)
-    val state = viewModel.expenses.collectAsState(initial = emptyList()) // ✅ Live update
+    val state = viewModel.expenses.collectAsState(initial = emptyList()) 
 
     LazyColumn(modifier = modifier.padding(horizontal = 15.dp)) {
         item {
@@ -176,12 +176,11 @@ fun TransactionItems(
     icon: Int,
     date: String,
     color: Color,
-    onDelete: () -> Unit // ✅ Correct the parameter type
+    onDelete: () -> Unit 
 ) {
     Box(modifier = Modifier.fillMaxWidth()) {
         Row {
             Box(
-                modifier = Modifier.background(Grayy, shape = RoundedCornerShape(10.dp))
             ) {
                 Image(
                     painter = painterResource(id = icon),
@@ -206,9 +205,8 @@ fun TransactionItems(
             fontWeight = FontWeight.SemiBold
         )
 
-        // ✅ Fix onDelete call
         IconButton(
-            onClick = { onDelete() }, // ✅ Call the lambda function
+            onClick = { onDelete() },
             modifier = Modifier
                 .align(Alignment.CenterEnd)
                 .width(25.dp),
