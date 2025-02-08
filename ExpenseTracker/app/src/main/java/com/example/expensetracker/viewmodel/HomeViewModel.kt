@@ -38,7 +38,6 @@ class HomeViewModel(private val dao: ExpenseDao, private val repo: Repo) : ViewM
 
     fun deleteExpense(id: Int) {
         viewModelScope.launch {
-            Log.d("DeleteFunction", "Deleting expense with ID: $id")
             repo.deleteExpense(id)
         }
     }
