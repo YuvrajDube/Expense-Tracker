@@ -9,7 +9,7 @@
 ## General info
 Expense Tracker is an Android application designed to help users monitor their expenses efficiently. It allows users to track their spending, categorize expenses, and calculate their remaining balance. The app is built using Jetpack Compose and follows the MVVM (Model-View-ViewModel) architecture to ensure scalability and maintainability.
 
-## App Functionality:-
+## App Functionality
 * Expense Tracking: Add, edit, and delete expenses with ease.
 
 * Category Management: Categorize expenses for better organization.
