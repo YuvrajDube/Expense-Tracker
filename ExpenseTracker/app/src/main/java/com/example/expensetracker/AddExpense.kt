@@ -93,7 +93,13 @@ fun AddExpense(navController: NavController) {
                Image(
                     painter = painterResource(id = R.drawable.chevron_left),
                     contentDescription = "",
-                    modifier = Modifier.align(Alignment.CenterStart),
+                    modifier = Modifier
+                        .align(Alignment.CenterStart)
+                        .clickable {
+                            coroutineScope.launch {
+                                navController.popBackStack()
+                            }
+                        }
                 )
                 Image(
                     painter = painterResource(id = R.drawable.dots),
